@@ -1,0 +1,132 @@
+.section {
+  position: relative;
+  background: #030408;
+  padding: clamp(5rem, 9vw, 9rem) 0 clamp(4rem, 7vw, 7rem);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: start;
+}
+
+/* ── Left copy ── */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.overline {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8aa4c8;
+}
+
+.overlineLine {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.headline {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.headlineDim {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.body {
+  font-size: clamp(0.88rem, 1.15vw, 1rem);
+  font-weight: 400;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.48);
+  max-width: 40ch;
+}
+
+.bodySmall {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.3);
+  max-width: 42ch;
+}
+
+/* ── Right timeline ── */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  padding-left: clamp(2rem, 4vw, 3.5rem);
+}
+
+.milestone {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 0 1rem;
+  align-items: start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+.milestone:last-child {
+  border-bottom: none;
+}
+
+.milestoneYear {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(138, 164, 200, 0.65);
+  padding-top: 0.05rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.milestoneLine {
+  display: none; /* not used in current layout */
+}
+
+.milestoneLabel {
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.055);
+  margin: 0 clamp(1.5rem, 5vw, 4rem);
+  margin-top: clamp(4rem, 6vw, 6rem);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .right {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+}

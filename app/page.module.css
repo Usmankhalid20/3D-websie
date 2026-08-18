@@ -1,0 +1,14 @@
+.main {
+  min-height: 100vh;
+  background: #04060d;
+  position: relative;
+}
+
+/* The CursorParallax wrapper needs to be fixed + full-screen
+   so it doesn't add layout height */
+.overlayParallax {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}

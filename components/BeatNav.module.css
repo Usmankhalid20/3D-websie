@@ -1,0 +1,50 @@
+.container {
+  position: fixed;
+  right: 1.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  pointer-events: auto;
+}
+
+.dot {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: scale(1.4);
+}
+
+.dotActive {
+  background: #8aa4c8;
+}
+
+.dotPast {
+  background: rgba(138, 164, 200, 0.35);
+}
+
+.dotRing {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(138, 164, 200, 0.5);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}
